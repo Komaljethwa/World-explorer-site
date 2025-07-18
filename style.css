@@ -93,7 +93,7 @@ color:  var(--main-color);
   z-index: 10001;
   display: none;
 }
-section{
+.section{
   padding: 70px 17% 60px;
 
 }
@@ -585,3 +585,12 @@ display: contents;
 }
     #menu-toggle:checked + .menu-icon + .menu-content {
       display: flex;}
+      @media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
