@@ -579,18 +579,13 @@ display: contents;
 
 }
 
-
-#menu-toggle:checked + .menu-icon + .menu-content {
-  display: flex;
+.container {
+  width: 100%;
+  padding: 20px;
 }
-    #menu-toggle:checked + .menu-icon + .menu-content {
-      display: flex;}
-      @media (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-  }
 
-  .sidebar {
-    display: none;
-  }
+img {
+  width: 100%;
+  height: auto;
 }
+
