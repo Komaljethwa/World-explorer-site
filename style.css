@@ -95,7 +95,7 @@ color:  var(--main-color);
   z-index: 10001;
   display: none;
 }
-.section{
+.section {
   padding: 70px 17% 60px;
 
 }
@@ -632,13 +632,13 @@ display: contents;
 }
 
 .Home-text p1 {
-  font-size: var(--p-font); /* was wrong: --p-font-- */
+  font-size: var(--p-font); 
 }
 
 .holiday-text p, 
 .culture-text p, 
 .text p {
-  font-size: var(--p-font); /* was wrong: --p-font-- */
+  font-size: var(--p-font); 
 }
 
 .center-text h2 {
