@@ -660,27 +660,22 @@ display: contents;
   #menu-toggle:checked + label + .menu-content {
     display: flex;
   }
-
-  .menu-content {
+@media (max-width: 768px) {
+  .Navbar {
     display: none;
-    flex-direction: column;
-    text-align: center;
-    position: absolute;
-    top: 70px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-    padding: 10px 20px;
-  }
-
-  .menu-content a {
-    margin: 10px 0;
-    font-size: 18px;
   }
 
   #menu-icon {
     display: block;
   }
-}
 
-
+  #menu-toggle:checked  .menu-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    border-radius: 10px;
+    padding: 15px;}}
+  }
