@@ -547,10 +547,6 @@ display: contents;
 #menu-toggle:checked ~ .menu-content {
   display: flex;
 }
-@media (max-width: 768px) {
-  .Navbar {
-    display: none;
-  }
 
   #menu-icon {
     display: block;
@@ -572,7 +568,7 @@ display: contents;
   #menu-toggle:checked ~ .menu-content {
     display: flex;
   }
-}
+
 
 
 .menu-icon {
@@ -618,7 +614,7 @@ display: contents;
 }
 
 .center-text h2 {
-  font-size: var(--h1); /* was: --h1-font */
+  font-size: var(--h1); 
 }
 @media (max-width: 768px) {
   /* Stack columns for sections */
@@ -637,7 +633,7 @@ display: contents;
     height: auto;
   }
 
-  /* Hide main navbar and show mobile menu icon */
+  
   .Navbar {
     display: none;
   }
@@ -646,11 +642,7 @@ display: contents;
     display: block;
   }
 
-  /* Show menu content when checkbox is checked */
-  #menu-toggle:checked ~ .menu-content {
-    display: flex;
-  }
-
+  
   /* Style the mobile dropdown menu */
   .menu-content {
     display: none;
