@@ -17,6 +17,8 @@
  --h1:6rem;
  --h2:2rem;
  --p-font:2rem;
+ font-size: var(--p-font);
+
 }
     
 
@@ -145,6 +147,8 @@ color:  var(--main-color);
     text-decoration: none; 
     margin-top: 10px; 
     cursor: pointer;
+    padding: 13px 40px;
+
   }
   .btn {
     display: inline-block;
@@ -158,6 +162,8 @@ color:  var(--main-color);
     transition: all 0.5s ease;
     text-decoration: none;
     padding: 13px, 40px;
+    padding: 13px 40px;
+
 
   }
   
@@ -322,6 +328,9 @@ margin-bottom: 20px;
 .centre-btn {
   text-align: center;
   margin-top: 2rem;
+  margin-left: 160%;
+
+
 }
 .center-text{
   text-align: center;
@@ -501,15 +510,50 @@ display: contents;
   background-color: var(--main-color); 
   color: var(--main-color);
 }
-@media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  header nav {
-    margin-top: 10px;
-  }
+.Holiday,
+.curture,
+.newsletter {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+}
+
+.Holiday-image img,
+.culture-image img {
+  width: 100%;
+  height: auto;
+}
+#menu-toggle:checked ~ .menu-content {
+  display: flex;
+}
+
+.menu-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 10px;
+  padding: 10px 20px;
+  z-index: 999;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  display: inline-block;
+}
+.box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.footer {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
 
   .footer {
     flex-direction: column;
@@ -519,24 +563,8 @@ display: contents;
   .footer-box {
     margin-bottom: 30px;
   }
-}
 
-@media (max-width: 600px) {
-  .content {
-    padding: 40px 8%;
-  }
 
-  header nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .footer-box a {
-    display: inline-block;
-    margin: 5px;
-  }
-  
-}
 
 
  #menu-toggle:checked + label + .menu-content {
