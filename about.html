@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  <!-- CSS & Icons -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <style>
+
+
+    .header {
+      padding: 15px;
+      position: fixed;
+      top: 0   ;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background:black;
+      margin-top: 0%;
+    }
+
+    .Logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .Logo span{
+      color:orange;
+    }
+
+    .Navbar-list {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      font-size: 1.5rem;
+    }
+
+    .Navbar-list li a{
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .Navbar-list li a:hover {
+      color: orange;
+      transform: translateY(-2px);
+    }
+  .h-right-content {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .h-right-content a {
+      color: #fff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .h-right-content a:hover {
+      color: orange;
+      transform: translateY(-2px);
+    }
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color:#f9f9f9;
+    }
+
+    .header {
+      background:black;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+.banner{
+   background-image: linear-gradient(rgba(228, 221, 221, 0.5), rgba(0, 0, 0, 0.5)), url('image/thailand.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 60px;
+    padding: 80px 20px 20px 20px ;
+}
+.banner h1{
+    font-size: 48px;
+    color: #f9f9f9;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+
+}
+.banner p{
+    font-size: 18px;
+    color: #f9f9f9;
+    margin: 10px 0;
+    font-family: arial , sans-serif;
+    text-align: center;
+}
+.btn-1 {
+  font-size: 16px;
+  background-color: #d3771c;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 5s ease;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+ border: 1px solid #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;}
+.btn-1:hover {
+  background-color: #f38303;
+    color: #000000;
+    transition: all 2s;
+}
+.about-intro h2{
+  font-size: 28px;
+color: #333; 
+ margin-bottom: 15px;
+  text-align: centre;
+  font-weight: bold;
+}
+.about-intro p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.why-choose-us h2{
+font-size: 1.5rem;
+color:#333;
+margin-bottom: 20px;
+margin-top: 5px;
+ }
+ .why-choose-us li{
+padding-left: 20px;
+margin-bottom: 20px;
+color: #555555;
+ }
+ .why-choose-us ul{
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #000000;
+ }
+ .container {
+  padding: 40px 20px;
+ }
+ .input[type="text"],
+
+ .input[type="Email"], textarea {
+width: 100%;
+padding: 12px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 8px;
+font-size: 1rem;
+ }
+ .textarea{
+  resize: vertical;
+ }
+.label{
+  color: #000000;
+}
+.testimonials {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.stars {
+  color: #FFD700;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.cta-section {
+  background: url(image/image-k.jpg);
+  color: rgb(255, 255, 255);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+.cta-section::before {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5) rgb(0, 0, 0); 
+  z-index: 1;
+}
+.cta-content {
+  position: relative;
+  z-index: 2;
+}
+.cta-content a{
+    padding: 10px 10px 10px 15px;
+  font-size: 16px;
+  background-color: #d3771c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 40px;
+}
+.cta-section p{
+  margin-bottom: 20px;
+  color: #fff;
+}
+.footer {
+  background-color: black;
+  color: #fff;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.footer .socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+.footer .socials a{
+  color: #fff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer .socials a:hover {
+  color:orange;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+  .footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+}
+
+.social-icons a {
+  color: #ddd;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 10px ;
+  margin-top: 0px;
+  font-size: 14px;
+  color: #aaa;
+  background-color: #000000;
+  margin-bottom: 1px;
+  padding-bottom: 10px;
+}
+
+  </style>
+    <header class="header">
+    <a href="#" class="Logo">Tra.<span>Vel</span></a>
+
+    <ul class="Navbar-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Home.html">Information</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="country.html">Country-list</a></li>
+    </ul>
+
+    <div class="h-right-content">
+      <a href="#">Follow us</a>
+      <a href="#"><i class="ri-instagram-line"></i></a>
+      <a href="#"><i class="ri-twitter-line"></i></a>
+      <a href="#"><i class="ri-facebook-fill"></i></a>
+      <a href="#"><i class="ri-whatsapp-fill"></i></a>
+    </div>
+
+  </header>
+</head>
+<div class="banner">
+    <h1>About Us</h1>
+    <p>Welcome to our travel website! We are passionate about helping you explore the world and create unforgettable memories.</p>
+    <a href="#" class="btn-1">Booking Now</a>
+</div>
+<!--about intro-->
+<section class="about-intro">
+    <h2>Who We Are</h2>
+    <p>We are a team of travel enthusiasts dedicated to providing you with the best travel experiences. Our mission is to inspire and assist you in planning your dream trips.</p>
+</section>
+<!--chose us-->
+<section class="why-choose-us">
+  <h2>what we offer</h2>
+  <ul>
+    <li>Customised Itineraries tailored to Your style and Budget</li>
+    <li>booking for Hotel And flight tour And More</li>
+    <li>Trusted By Thousand Of Happy Travel</li>
+    <li>Traveling World with us</li>
+  </ul>
+</section>
+<!---terminonals-->
+<section class="testimonials">
+  <h2>What Our Travelers Say</h2>
+  <div class="testimonial-container">
+    
+    <div class="testimonial-card">
+      <img src="image/girl-1.jpg" alt="Traveler 1">
+      <h3>Sarah Khan</h3>
+      <p>"One of the best trips I've ever had! The whole experience was so smooth and unforgettable."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    
+    <div class="testimonial-card">
+      <img src="image/boy.jpg" alt="Traveler 2">
+      <h3>Ali Ahmed</h3>
+      <p>"Excellent service and amazing destinations. I would definitely recommend them!"</p>
+      <div class="stars">★★★★☆</div>
+    </div>
+    
+    <div class="testimonial-card">
+      <img src="image/girl-3.jpg" alt="Traveler 3">
+      <h3>Fatima Noor</h3>
+      <p>"From the planning to the trip itself, everything was perfect. Will book again!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+  </div>
+</section>
+</form>
+</div>
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Ready to Start Your Journey?</h2>
+    <p>Let us plan your perfect trip. Contact us now to get a custom travel package!</p>
+    <a href="Home.html" class="cta-btn">Contact Us</a>
+    <a href="Home.html" class="cta-btn secondary">View Packages</a>
+  </div>
+</section>
+<!--footer-->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h2>WanderWorld</h2>
+      <p>Your journey begins here.</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Home.html">Packages</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="country.html">Country-list</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email: info@wanderworld.com</p>
+      <p>Phone: +92 300 1234567</p>
+      <div class="social-icons">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-twitter-line"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+    <p>&copy; 2025 WanderWorld. All rights reserved.</p>
+  </div>
+
+
+</body>
+</html>
